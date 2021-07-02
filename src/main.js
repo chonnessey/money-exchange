@@ -38,5 +38,8 @@ $(document).ready(function() {
       .then(function(response) {
         getMoney(response)
       })
+      .catch(function(error) {
+        $('#results').html(`There's been an error: ${error}`)
+      })
   })
 })
