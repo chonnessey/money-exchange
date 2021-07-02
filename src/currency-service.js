@@ -12,4 +12,17 @@ export default class CurrencyService {
         return error;
       })
   }
+
+  static getError() {
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.AI_KE}/latest/USD`)
+      .then(function(response) {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .catch(function(error) {
+        return error;
+      })
+  }
 }

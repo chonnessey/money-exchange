@@ -12,6 +12,7 @@ function getMoney(response) {
   let hungaryConversion = $('#dollar').val() * response.conversion_rates.HUF
   let argentinaConversion = $('#dollar').val() * response.conversion_rates.ARS
   let australiaConversion = $('#dollar').val() * response.conversion_rates.AUD
+  let epiCountryConversion = $('#dollar').val() * response.conversion_rates.KPW
   if(response) {
     if(country === 'euro') {
       $('#results').html(`The conversion in Euros is ${euroConversion}`)
@@ -23,9 +24,21 @@ function getMoney(response) {
       $('#results').html(`The conversion in Argentinian Pesos is ${argentinaConversion}`)
     } else if(country === 'australia') {
       $('#results').html(`The conversion in Australian Dollars is ${australiaConversion}`)
-    } 
+    } else if(country === 'epicountry') {
+      $('#results').html(`The conversion in Epilandia Dollars is ${epiCountryConversion}`)
+    }
   }
 }
+
+// function fakeMoney(errorResponse) {
+//   let country = $('#country').val();
+  // let epiCountryConversion = $('#dollar').val() * errorResponse.conversion_rates.XXX
+//   if(errorResponse) {
+//     if(country === 'epicountry') {
+//       $('#results').html(`The conversion in Epilandia Dollars is ${epiCountryConversion}`)
+//     }
+//   }
+// }
 
 
 
@@ -41,5 +54,12 @@ $(document).ready(function() {
       .catch(function(error) {
         $('#results').html(`There's been an error: ${error}`)
       })
+    // CurrencyService.getError()
+    //   .then(function(errorResponse) {
+    //     fakeMoney(errorResponse)
+    //   })
+    //   .catch(function(error) {
+    //     $('#results').html(`There's been an error: ${error}`)
+    //   })
   })
 })
