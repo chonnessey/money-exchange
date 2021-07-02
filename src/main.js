@@ -8,9 +8,15 @@ import CurrencyService from './currency-service'
 function getMoney(response) {
   let country = $('#country').val();
   let euroConversion = $('#dollar').val() * response.conversion_rates.EUR
+  let guatemalaConversion = $('#dollar').val() * response.conversion_rates.GTQ
+  let hungaryConversion = $('#dollar').val() * response.conversion_rates.HUF
   if(response) {
     if(country === 'euro') {
       $('#results').html(`The conversion in Euros is ${euroConversion}`)
+    } else if(country === 'guatemala') {
+      $('#results').html(`The conversion in Guatemalan Quetzals is ${guatemalaConversion}`)
+    } else if(country === 'hungary') {
+      $('#results').html(`The conversion in Hungarian Forints is ${hungaryConversion}`)
     }
   }
 }
