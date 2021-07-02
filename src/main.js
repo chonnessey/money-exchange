@@ -6,22 +6,23 @@ import CurrencyService from './currency-service'
 
 
 function getMoney(response) {
-  // let country = $('#country').val();
-  let euroConversion = currency * response.conversion_rates.EUR
+  let country = $('#country').val();
+  let euroConversion = $('#dollar').val() * response.conversion_rates.EUR
   if(response) {
-    $('#results').html(`The conversion in Euros is ${euroConversion}`)
-    
+    if(country === 'euro') {
+      $('#results').html(`The conversion in Euros is ${euroConversion}`)
+    }
   }
 }
 
-let currency = $('#dollar').val()
+
 
 
 
 $(document).ready(function() {
   $('#money').submit(function(event) {
     event.preventDefault()
-    CurrencyService.getCurrency(currency)
+    CurrencyService.getCurrency()
       .then(function(response) {
         getMoney(response)
       })
