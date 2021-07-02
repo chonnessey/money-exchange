@@ -1,15 +1,15 @@
-# Currency Exchange
+# Currency Exchange :moneybag:
 
-### By - _Adrian Camacho_
+### By - _Adrian Camacho_ :alien:
 
 ---
 
-### Project Description
+### Project Description :pencil:
 
 This project is a web application that asks the user to input a number in USD, then asks them to select a country and then it gives them the conversion rate of said country.
 ___
 
-### Tech Stack
+### Tech Stack :floppy_disk:
 1. HTML5+CSS3
 2. JavaScript/ES2018+
 3. jQuery
@@ -19,7 +19,7 @@ ___
 7. babel transpiler
 
 ---
-### Installation Instructions
+### Installation Instructions :pushpin:
 1. Clone this repo: `git clone https://github.com/chonnessey/money-exchange.git`
 2. Enter new directory `cd money-exchange`
 3. Navigate to _https://www.exchangerate-api.com/_
@@ -31,13 +31,13 @@ ___
 9. Enter a number, choose a country and see the conversion rates!
 10. For a production build, use `npm run build`
 ---
-### Known Issues:
-1. NO KNOWN ISSUES
+### Known Bugs: :bug:
+1. NO KNOWN BUGS.
 2. Please open a pull request if you have any issues!
 ---
-### Contact information:
+### Contact information: :e-mail:
 Adrian Camacho: <adriancamacho18@gmail.com>
-### License is GPLv3 and I make no claim to copyright. 
+### License is GPLv3 and I make no claim to copyright. :guardsman:
 <br />
 
 > You can't steal what is freely given. Enjoy!
