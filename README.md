@@ -32,7 +32,7 @@ ___
 10. For a production build, use `npm run build`
 ---
 ### Known Bugs: :bug:
-1. Still working on error handling.
+1. No Known Bugs.
 2. Please open a pull request if you have any issues!
 ---
 ### Contact information: :e-mail:
