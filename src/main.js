@@ -12,7 +12,7 @@ function getMoney(response) {
   let hungaryConversion = $('#dollar').val() * response.conversion_rates.HUF
   let argentinaConversion = $('#dollar').val() * response.conversion_rates.ARS
   let australiaConversion = $('#dollar').val() * response.conversion_rates.AUD
-  let epiCountryConversion = response.conversion_rates.XXX
+  let epiCountryConversion = response.conversion_rates.KPW
   if(country === 'euro') {
     $('#results').html(`The conversion in Euros is ${euroConversion}`)
   } else if(country === 'guatemala') {
@@ -43,7 +43,7 @@ $(document).ready(function() {
         getMoney(response)
       })
       .catch(function(error) {
-        $('#results').html(`There's been an error: ${error}`)
+        $('#results').html(`Oops! something went wrong: ${error}`)
       })
   })
 })
